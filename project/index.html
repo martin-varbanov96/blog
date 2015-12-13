@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style/style.css"/>
+    <title></title>
+</head>
+<body>
+    <div id="burger-wrap">
+        <img id="burger" src="img/hamburger.png"/>
+        <nav id="side-nav">
+            <div class="nav-element-side" id="about-me-nav-side" ><a href="#about-me-title">About me</a></div>
+            <div class="nav-element-side" id="projects-nav-side"><a href="#project-title">Projects</a></div>
+            <div class="nav-element-side" id="skills-nav-side"><a href="#skills-title">Skills</a></div>
+            <div class="nav-element-side" id="contacts-nav-side"><a href="#contacts-title">Contacts</a></div>
+        </nav>
+    </div>    
+     <div id="wrapper">
+        <nav id="top-nav">
+            <div class="nav-element" id="about-me-nav"><a href="#about-me-title">About me</a></div>
+            <div class="nav-element" id="projects-nav"><a href="#project-title">Projects</a></div>
+            <div class="nav-element" id="skills-nav"><a href="#skills-title">Skills</a></div>
+            <div class="nav-element" id="contacts-nav"><a href="#contacts-title">Contacts</a></div>
+        </nav>
+        <div id="content-main">
+            <div id="about-me-content">
+                <h2 id="about-me-title">About me</h2>
+                <img src="img/martin.JPG" id="picture-martin"/>
+                <p id="content-main-intro">
+                    Greetings,
+                    I am Martin, 19 years old. This is my first year in the Sofia university and I am also trending as a junior programmer.      
+                </p>
+                <p>
+                    <h4>Highschool: </h4>
+                      I wrote my first "Hello, world!" back in Highschool. I was 9th grade. I will never forget that day. The sun was shining, birds were singing and I was ... locked inside a room with a bunch of computers and a not so inspiring teacher. In Highschool i studied Java, HTML and CSS on a basic level. I didn't quite enjoy programming back then. I felt like the things we do were useless and have no practical use what so ever but at some point I met some people who got me into coding, people who brought value into these technologies, people who made programming useful for me.
+                </p>
+                <p>
+                    <h4>The Software university: </h4>
+                    When I was 11th grade I had accomplished everything there was to accomplish in Highschool but I wanted to improve so I starting searching for someone in school to teach me Object-oriented programming. I went through all of the school teacher but all of them refused to help me. A couple of months later I found a post about a trending software accademy called "The Software university". At first I was skeptical but I decided to give it a try. I finished level 0 and level 1 and I can say that this place gave me my programming fundamentals. Thexre I learned the basics of a couple of languages, frameworks and other technologies, I learned how to work in a team but most importantly i have learned how to manage problems I can't solve. A lot of time I was facing hard problems to which I had no solution but over time I learned how to start reserching the problems, gridnding it out and eventually solving it.
+                </p>
+                <p>
+                    <h4>Today: </h4>
+                    Nowadays, I am focused on learning math and doing my own small web projects. I feel like I am not receiving the needed education and I feel like I can learn much more in less time but I need a place to start at and I feel like the university isn't the right place. It's obvious that I will not learn anything practical- oriented I will become more eloquent and erudite but I also need a place the start doing real work. Currently I am focused on Front- end related technologies like jQuery and AJAX but I am also happy with studying Node.js in the university.
+                </p>
+            </div>
+            <div id="projects-content">
+                <h2 id="project-title">Projects</h2>
+                <p>If you want to check all of my project, you can check my profile in <a href="https://github.com/martin-varbanov96">Github</a></p>
+                <ul id="projects-game-list" class="project-button">
+                    <h3>Game projects: </h3>
+                    <li class="projects-games-li">Tic Tac toe</li>
+                    <li class="projects-games-li">Clcick the dot</li>
+                </ul>
+                <ul id="math-problems-list" class="project-button">
+                    <h3>Math projects: </h3>
+                    <li class="math-problems-li"><a href="http://www.abv.bg/">Finding determinant of a 2x2 Matrix</a></li>
+                    <li class="math-problems-li">Finding determinant of a 3x3 Matrix</li>
+                    <li class="math-problems-li">Finding determinant of a nxn Matrix</li>
+                    <li class="math-problems-li">Basic matrix operations of a nxn Matrix</li>
+                </ul>
+            </div>
+            <div id="skills-content">
+                <h2 id="skills-title">Skills</h2>
+                <ul id="skills-list">
+                    <li class="skills-li">Html</li>
+                    <li class="skills-li">CSS</li>
+                    <li class="skills-li">JavaScript</li>
+                    <li class="skills-li">jQuery</li>
+                    <li class="skills-li">AJAX</li>
+                    <li class="skills-li">Node.js</li>
+                    <li class="skills-li">PHP</li>
+                    <li class="skills-li">Java</li>
+                    <li class="skills-li">C#</li>
+                    <li class="skills-li">MySQL</li>
+                </ul>
+                
+            </div>
+            <div id="skill-meter">
+                            <div id="performance" class="meter-desc">Performance</div>
+                            <meter value="0.6">60%</meter>
+                            <div id="experience" class="meter-desc">Experience</div>
+                            <meter value="0.6">60%</meter>
+                            <div id="Preference" class="meter-desc">Preference</div>
+                            <meter value="0.6">60%</meter>
+                            <div id="description">This is what i think</div>
+                        </div>
+            <div id="contacts-content">
+                <h2 id="contacts-title">Contacts</h2>
+                <p>e-mail: martin_varbanov96@abv.bg</p>
+                <p>phone: +359887596267</p>
+            </div>
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="script/app.js"></script>   
+</body>
+</html>
