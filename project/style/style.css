@@ -66,7 +66,8 @@ a{
     display: inline-block;
 }
 #skill-meter{
-    margin-left: 500px;
+    margin: 60px 10px 10px 500px;
+    position: absolute;
     display: inline-block;
 }
 #skills-content{
@@ -90,12 +91,36 @@ ul{
 #skills-nav:hover{
     border-bottom: 5px solid yellow;
 }
+#description{
+    padding: 2px;
+    width: 400px;
+    height: 100px;
+}
 .project-button{
     padding: 5px;
-    margin: 5px;
-    width: 100px;
-    border: 1px solid white; 
+    margin: 0px auto;    
+    width: 50%;
+    border: 1px solid white;    
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;  
 }
 #contacts-nav:hover{
     border-bottom: 5px solid blue;
+}
+#burger:hover, .project-button:hover, .skills-li:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #1A1;
+}
+#skills-list{
+    font-size: 15px;
+}
+.skills-li{
+    padding: 1px;
+    margin: 3px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
 }
