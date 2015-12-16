@@ -7,6 +7,7 @@
     <title></title>
 </head>
 <body>
+    <div id="background-transparent"></div>
     <div id="burger-wrap">
         <img id="burger" src="img/hamburger.png"/>
         <nav id="side-nav">
@@ -16,16 +17,18 @@
             <div class="nav-element-side" id="contacts-nav-side"><a href="#contacts-title">Contacts</a></div>
         </nav>
     </div>    
-     <div id="wrapper">
+    <div id="nav-wrap">
         <nav id="top-nav">
-            <div class="nav-element" id="about-me-nav"><a href="#about-me-title">About me</a></div>
-            <div class="nav-element" id="projects-nav"><a href="#project-title">Projects</a></div>
-            <div class="nav-element" id="skills-nav"><a href="#skills-title">Skills</a></div>
-            <div class="nav-element" id="contacts-nav"><a href="#contacts-title">Contacts</a></div>
-        </nav>
+                <div class="nav-element" id="about-me-nav"><a href="#about-me-title">About me</a></div>
+                <div class="nav-element" id="projects-nav"><a href="#project-title">Projects</a></div>
+                <div class="nav-element" id="skills-nav"><a href="#skills-title">Skills</a></div>
+                <div class="nav-element" id="contacts-nav"><a href="#contacts-title">Contacts</a></div>
+            </nav>
+    </div>
+     <div id="wrapper">            
         <div id="content-main">
-            <div id="about-me-content">
-                <h2 id="about-me-title">About me</h2>
+            <div id="about-me-content" class="page-content">
+                <h2 id="about-me-title" >About me</h2>
                 <img src="img/martin.JPG" id="picture-martin"/>
                 <p id="content-main-intro">
                     Greetings,
@@ -48,23 +51,23 @@
                     Nowadays, I am focused on learning math and doing my own small web projects. I feel like I am not receiving the needed education and I feel like I can learn much more in less time but I need a place to start at and I feel like the university isn't the right place. It's obvious that I will not learn anything practical- oriented I will become more eloquent and erudite but I also need a place the start doing real work. Currently I am focused on Front- end related technologies like jQuery and AJAX but I am also happy with studying Node.js in the university.
                 </p>
             </div>
-            <div id="projects-content">
+            <div id="projects-content" class="page-content">
                 <h2 id="project-title">Projects</h2>
                 <p>If you want to check all of my project, you can check my profile in <a href="https://github.com/martin-varbanov96">Github</a></p>
                 <ul id="projects-game-list" class="project-button">
                     <h3>Game projects: </h3>
-                    <li class="projects-games-li">Tic Tac toe</li>
+                    <li class="projects-games-li" id="tic-tac-toe-url">Tic Tac toe</li>
                     <li class="projects-games-li">Clcick the dot</li>
                 </ul>
                 <ul id="math-problems-list" class="project-button">
                     <h3>Math projects: </h3>
-                    <li class="math-problems-li"><a href="http://www.abv.bg/">Finding determinant of a 2x2 Matrix</a></li>
+                    <li class="math-problems-li" id="det-two">Finding determinant of a 2x2 Matrix</li>
                     <li class="math-problems-li">Finding determinant of a 3x3 Matrix</li>
                     <li class="math-problems-li">Finding determinant of a nxn Matrix</li>
                     <li class="math-problems-li">Basic matrix operations of a nxn Matrix</li>
                 </ul>
             </div>
-            <div id="skills-content">
+            <div id="skills-content" class="page-content">
                 <h2 id="skills-title">Skills</h2>
                 <ul id="skills-list">
                     <li class="skills-li" id="html-skill">Html</li>
@@ -79,8 +82,7 @@
                     <li class="skills-li" id="cplusplus-skill">C++</li>
                     <li class="skills-li" id="mysql-skill">MySQL</li>
                 </ul>
-                
-            </div>
+            
             <div id="skill-meter">
                             <div class="meter-desc">Performance</div>
                             <meter id="performance" value="0.6">60%</meter>
@@ -89,8 +91,9 @@
                             <div  class="meter-desc">Preference</div>
                             <meter id="preference" value="0.6">60%</meter>
                             <div id="description">This is what i think</div>
-                        </div>
-            <div id="contacts-content">
+                        </div>    
+            </div>
+            <div id="contacts-content" class="page-content">
                 <h2 id="contacts-title">Contacts</h2>
                 <p>e-mail: martin_varbanov96@abv.bg</p>
                 <p>phone: +359887596267</p>
