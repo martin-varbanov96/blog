@@ -13,13 +13,11 @@ $(document).ready(function(){
 //    });
     $("#det-two").click(function(){
         $("#background-transparent").toggle();
-        $("#background-transparent").append("<div id='front-app'></div>");
+        $("body").append('<div id="front-app"><div id="firsRow"><input type="text" class="input" id="a11" /><input type="text" class="input" id="a12" /></div><div id="secondRow"><input type="text" class="input" id="a21" /><input type="text" class="input" id="a22"/></div><div class="submit" id="submit">Submit</div><div class="result" id="result">result</div></div>');
     });
     
     
-    
     $(window).scroll(function(){
-        console.log($(window).scrollTop());
         if($(window).scrollTop() == 0){
             $("#side-nav").fadeOut();
         }
