@@ -7,7 +7,47 @@
     <title></title>
 </head>
 <body>
-    <div id="background-transparent"></div>
+    <div id="det-two-app" class="project-app">
+        <button id="project-det2-close" class="project-app-close">X</button>
+        <div id="firsRow">
+            <input type="text" class="input" id="a11" />
+            <input type="text" class="input" id="a12" />
+        </div>
+        <div id="secondRow">
+            <input type="text" class="input" id="a21" />
+            <input type="text" class="input" id="a22"/></div>
+        <button class="submit" id="det-2-submit">Submit</button>
+        <div class="result" id="result">result</div>
+    </div>
+    
+<!--    3x3 determinant app-->
+    <div id="project-three-app" class="project-app">
+        <button id="project-det3-close" class="project-app-close">X</button>
+        <div id="firstRow">
+            <input id="a00" class="input" value="0"/>
+            <input id="a01" class="input" value="0" />
+            <input id="a02" class="input" value="0" />
+        </div>                                 
+        <div id="secondRow">                   
+            <input id="a10" class="input" value="0" />
+            <input id="a11" class="input" value="0" />
+            <input id="a12" class="input" value="0" />
+        </div>                                 
+        <div id="thirdRow">                    
+            <input id="a20" class="input" value="0" />
+            <input id="a21" class="input" value="0" />
+            <input id="a22" class="input" value="0" />
+        </div>
+        <button id="det-3-submit">Submit</button>
+        <div class="result" id="result">Result</div>
+    </div>
+    
+<!--    nxn determinant-->
+    <div class="project-app" id="project-n-app">
+        <input id="size" class/>
+        <button id="project-n-input-button">Enter</button>
+    </div>
+<!--    <div id="background-transparent"></div>-->
     <div id="burger-wrap">
         <img id="burger" src="img/hamburger.png"/>
         <nav id="side-nav">
@@ -55,15 +95,19 @@
                 <h2 id="project-title">Projects</h2>
                 <p>If you want to check all of my project, you can check my profile in <a href="https://github.com/martin-varbanov96">Github</a></p>
                 <ul id="projects-game-list" class="project-button">
-                    <h3>Game projects: </h3>
+                    <div id="game-dropdown">
+                        <h3 >Game projects: </h3>
+                    </div>
                     <li class="projects-games-li" id="tic-tac-toe-url">Tic Tac toe</li>
                     <li class="projects-games-li">Clcick the dot</li>
                 </ul>
                 <ul id="math-problems-list" class="project-button">
-                    <h3>Math projects: </h3>
+                    <div id="math-dropdown">
+                        <h3 >Math projects: </h3>
+                    </div>
                     <li class="math-problems-li" id="det-two">Finding determinant of a 2x2 Matrix</li>
-                    <li class="math-problems-li">Finding determinant of a 3x3 Matrix</li>
-                    <li class="math-problems-li">Finding determinant of a nxn Matrix</li>
+                    <li class="math-problems-li" id="det-three">Finding determinant of a 3x3 Matrix</li>
+                    <li class="math-problems-li" id="det-n">Finding determinant of a nxn Matrix</li>
                     <li class="math-problems-li">Basic matrix operations of a nxn Matrix</li>
                 </ul>
             </div>

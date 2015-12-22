@@ -1,6 +1,8 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */ /*global define */
 $(document).ready(function(){        
     $("#about-me-content").fadeIn();
+    
+  
 
     //TODO- update the scroll 
 //    $(window).scroll( function(){
@@ -11,34 +13,98 @@ $(document).ready(function(){
 //                $("#burger-wrap").css("visibility", "hidden");
 //        }
 //    });
+    
+    
+    //exit current app with the X button
+    $(".project-app-close").click(function(){
+        $(".project-app-close").parent().fadeOut("slow");            
+    });
+    
+    //on click toggle the determinant 2x2 app TODO- add a transparent background
     $("#det-two").click(function(){
-        $("#background-transparent").toggle();
-        $("body").append('<div id="front-app"><div id="firsRow"><input type="text" class="input" id="a11" /><input type="text" class="input" id="a12" /></div><div id="secondRow"><input type="text" class="input" id="a21" /><input type="text" class="input" id="a22"/></div><div class="submit" id="submit">Submit</div><div class="result" id="result">result</div></div>');
+        $(".project-app").css("display", "none");
+        $("#det-two-app").toggle("slow");
+    });
+        
+    //on click toggle the determinant 3x3 app TODO- add a transparent background    
+    $("#det-three").click(function(){
+        $(".project-app").css("display", "none");
+        $("#project-three-app").toggle("slow");
     });
     
     
-    $(window).scroll(function(){
-        if($(window).scrollTop() == 0){
+    $(window).scroll(function() {
+        var scrollTop = $(window).scrollTop();
+        var $projects = $("#projects-content");
+        var $skills = $("#skills-content");
+        var $contacts = $("#contacts-content");        
+        
+        if (scrollTop == 0) {
             $("#side-nav").fadeOut();
         }
-        if($(window).scrollTop() >= 150){
-            $("#projects-content").fadeIn("slow");
+        if (scrollTop >= ($projects.offset().top + 1)/2) {
+            $projects.fadeIn("slow");
         }
-        if($(window).scrollTop() >= 420){
-            $("#skills-content").fadeIn("slow");
+        if (scrollTop >= $skills.offset().top) {
+            
+            $skills.fadeIn("slow");
         }
-        if($(window).scrollTop() >= 700){
-            $("#contacts-content").fadeIn("slow");
+        if (scrollTop >= $contacts.offset().top) {
+            $contacts.fadeIn("slow");
         }
     });
+    
+     $('#det-2-submit').click(function(){
+       findDs2();
+   });          
+    $("#det-3-submit").click(function(){
+        var matrix = getEmptyMatrix([], 3);
+        for(var i = 0; i< matrix.length; i++){
+            for(var j = 0; j < matrix.length; j++){
+                matrix[i][j] = $("#project-three-app").find("#a" + i + "" + j).val();
+            }
+        }
+        var result = get3x3DS(matrix); 
+        $("#project-three-app").find("#result").text(result);
+        
+    });
+    
+    $("#det-n").click(function(){
+        $("#project-n-app").toggle("slow");        
+    });
+    
+    //TODO- finish the nxn app
+    $("#project-n-app").find("#project-n-input-button").click(function(){
+        var n = $("#project-n-app").find("#size").val();
+        console.log(n);
+        $("#project-n-app").empty();
+        for(var i = 0; i < n; i++){
+            for(var j = 0; j < n; j++){
+                
+            }
+        }
+    });
+
+    //generate a DS of the matrix   
+    function getQuadratticDS(a11, a12, a21, a22){
+        return a11 * a22 - a12 * a21;
+    }
+    function findDs2() {    
+        var $topLeft = $("#a11").val();
+        var $topRight = $("#a12").val();
+        var $botLeft = $("#a21").val();
+        var $botRight = $("#a22").val();
+        var $result = getQuadratticDS($topLeft, $topRight, $botLeft, $botRight);    
+    $("#result").text($result);
+}
     
     $("#burger").click(function(){
         $("#side-nav").toggle("fast");
     });    
-    $('#projects-game-list').click(function(){
+    $('#game-dropdown').click(function(){
         $('.projects-games-li').toggle("fast");
     });
-    $('#math-problems-list').click(function(){
+    $('#math-dropdown').click(function(){
        $('.math-problems-li').toggle("fast"); 
     });
     $(".skills-li").click(function(i){
