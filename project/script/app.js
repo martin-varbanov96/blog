@@ -72,13 +72,16 @@ $(document).ready(function(){
     $("#det-n").click(function(){
         $(".project-app").css("display", "none");
         $("#project-n-app").toggle("slow");
+        $("#project-n-app").empty();
+        $("#project-n-app").append('<button id="project-detn-close" class="project-app-close">X</button><input type="text" id="size"/><button id="project-n-input-button">Enter size</button>');
     });
     
-    //TODO- finish the nxn app
-    $("#project-n-input-button").click(function(){
+    //TODO- finish the nxn app 
+    $("#project-n-input-button").live("click", function(){
         var n = $("#project-n-app").find("#size").val();
         $("#project-n-app").empty();
-        $("#project-n-app").append('<button id="project-detn-close" class="project-app-close">X</button>');
+                $("#project-n-app").append('<button id="project-detn-close" class="project-app-close">X</button>');
+
         var arr = getEmptyMatrix([], n);
         for(var i = 0; i < n; i++){
             $("#project-n-app").append("<tr>");
@@ -88,14 +91,22 @@ $("#matrixRight").append("<input id=b" + i + "" + j + ' class="textFieldRight">'
             }
         }
         $("#project-n-app").append("<button id='project-n-result-submit'> Submit");
-        $("#project-n-result-submit").click(function(){
+        $("#project-n-result-submit").live("click", function(){
           for(var i = 0; i < n; i++){
             for(var j = 0; j < n; j++){
                 arr[i][j] = $("#project-n-app").find("#a" + i + "" + j).val();
             }
           }
-            
-        });
+        $("#project-n-app").empty();
+        $("#project-n-app").append('<button id="project-detn-close" class="project-app-close">X</button><div class="result">'+ getDS(arr) +'</div><button id="project-n-new-matrix">Enter new Matrix</button>');
+
+        });    
+    });
+    
+    //reset the nxn app
+    $("#project-n-new-matrix").live("click", function(){
+        $("#project-n-app").empty();
+        $("#project-n-app").append('<button id="project-detn-close" class="project-app-close">X</button><input type="text" id="size"/><button id="project-n-input-button">Enter size</button>');        
     });
 
     //generate a DS of the matrix   
