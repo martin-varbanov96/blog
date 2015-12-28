@@ -16,8 +16,8 @@ $(document).ready(function(){
     
     
     //exit current app with the X button
-    $(".project-app-close").click(function(){
-        $(".project-app-close").parent().fadeOut("slow");            
+    $(".project-app-close").live("click", function(){
+                $(".project-app-close").parent().fadeOut("slow");            
     });
     
     //on click toggle the determinant 2x2 app TODO- add a transparent background
@@ -42,7 +42,7 @@ $(document).ready(function(){
         if (scrollTop == 0) {
             $("#side-nav").fadeOut();
         }
-        if (scrollTop >= ($projects.offset().top + 1)/2) {
+        if (scrollTop >= ($projects.offset().top)/2) {
             $projects.fadeIn("slow");
         }
         if (scrollTop >= $skills.offset().top) {
@@ -70,19 +70,32 @@ $(document).ready(function(){
     });
     
     $("#det-n").click(function(){
-        $("#project-n-app").toggle("slow");        
+        $(".project-app").css("display", "none");
+        $("#project-n-app").toggle("slow");
     });
     
     //TODO- finish the nxn app
-    $("#project-n-app").find("#project-n-input-button").click(function(){
+    $("#project-n-input-button").click(function(){
         var n = $("#project-n-app").find("#size").val();
-        console.log(n);
         $("#project-n-app").empty();
+        $("#project-n-app").append('<button id="project-detn-close" class="project-app-close">X</button>');
+        var arr = getEmptyMatrix([], n);
         for(var i = 0; i < n; i++){
+            $("#project-n-app").append("<tr>");
             for(var j = 0; j < n; j++){
-                
+$("#matrixRight").append("<input id=b" + i + "" + j + ' class="textFieldRight">');
+                $("#project-n-app").append('<input id="a' + i + "" + j +'"  class="project-n-inputfield"/>');
             }
         }
+        $("#project-n-app").append("<button id='project-n-result-submit'> Submit");
+        $("#project-n-result-submit").click(function(){
+          for(var i = 0; i < n; i++){
+            for(var j = 0; j < n; j++){
+                arr[i][j] = $("#project-n-app").find("#a" + i + "" + j).val();
+            }
+          }
+            
+        });
     });
 
     //generate a DS of the matrix   
