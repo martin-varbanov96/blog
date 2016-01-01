@@ -119,12 +119,6 @@ a{
     width: 300px;
     float: right;
 }
-/*
-#skills-content{
-    display: inline-block;
-    width: 100%;
-}
-*/
 .projects-games-li{
     display: none;
 }
@@ -160,13 +154,6 @@ ul{
 #contacts-nav:hover{
     border-bottom: 5px solid blue;
 }
-/*
-#burger:hover, .project-button:hover, .skills-li:hover{
-    cursor: pointer;
-    background-color: black;
-    color: #1A1;
-}
-*/
 .page-content{
     display: none;
     border: 1px solid black;
@@ -186,4 +173,26 @@ ul{
     border-radius: 5px;
     text-align: center;
     vertical-align: middle;
+}
+.marked {
+    background-color: #5F5;
+    color: #FF0;
+    font-size: 50px;
+    text-align: center;
+}
+.freeSpot {
+    width: 50px;
+    height: 50px;
+    background-color: #55F;
+    color: #F55;
+    font-size: 50px;
+    text-align: center;
+}
+.botMarked {
+    width: 50px;
+    height: 50px;
+    background-color: #F55;
+    color: #55F;
+    font-size: 50px;
+    text-align: center;
 }
