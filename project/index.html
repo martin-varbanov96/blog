@@ -132,7 +132,7 @@
                         <h3 >Game projects: </h3>
                     </div>
                     <li class="projects-games-li" id="tic-tac-toe-url">Tic Tac toe</li>
-                    <li class="projects-games-li">Clcick the dot</li>
+<!--                    <li class="projects-games-li">Clcick the dot</li>-->
                 </ul>
                 <ul id="math-problems-list" class="project-button">
                     <div id="math-dropdown">
@@ -141,7 +141,7 @@
                     <li class="math-problems-li" id="det-two">Finding determinant of a 2x2 Matrix</li>
                     <li class="math-problems-li" id="det-three">Finding determinant of a 3x3 Matrix</li>
                     <li class="math-problems-li" id="det-n">Finding determinant of a nxn Matrix</li>
-                    <li class="math-problems-li">Basic matrix operations of a nxn Matrix</li>
+<!--                    <li class="math-problems-li">Basic matrix operations of a nxn Matrix</li>-->
                 </ul>
             </div>
 
@@ -164,12 +164,25 @@
             
             <div id="skill-meter">
                             <div class="meter-desc">Performance</div>
-                            <meter id="performance" value="0.6">60%</meter>
+<!--                            <meter id="performance" value="0.6">60%</meter>-->
+                            <div id="performance-bar" class="skill-meter-bar">
+                                <div id="performance" class="meter"></div>
+                            </div>
+                
                             <div class="meter-desc">Experience</div>
-                            <meter  id="experience"  value="0.6">60%</meter>
+<!--                            <meter  id="experience"  value="0.6">60%</meter>-->
+                             <div id="experience-bar" class="skill-meter-bar">
+                                <div id="experience" class="meter"></div>
+                            </div>
+                
                             <div  class="meter-desc">Preference</div>
-                            <meter id="preference" value="0.6">60%</meter>
-                            <div id="description">This is what i think</div>
+<!--                            <meter id="preference" value="0.6">60%</meter>-->
+                            <div id="preference-bar" class="skill-meter-bar">
+                                <div id="preference" class="meter"></div>
+                            </div>
+                            </div>
+                
+                            <div id="description"></div>
                         </div>    
             </div>
 
@@ -182,6 +195,7 @@
         </div>
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="script/jquery-ui.min.js"></script>>
     <script src="script/app.js"></script>   
 </body>
 </html>
