@@ -481,27 +481,22 @@ function reset() {
         $("#project-three-app").toggle("slow");
     });
     
-    
+    //manage the scroll => fadeIn pages
     $(window).scroll(function() {
-        var scrollTop = $(window).scrollTop();
-        var $projects = $("#projects-content");
-        var $skills = $("#skills-content");
-        var $contacts = $("#contacts-content");        
+            if ($(window).scrollTop() == 0) {
+                $("#side-nav").fadeOut();
+            }
+//            if($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
+//            console.log($(window).scrollTop() + $(window).height());
+//            console.log("||");
+//            console.log($(document).height() - 100);
+//                $(".page-content").next().fadeIn("slow");
+//            }
         
-        if (scrollTop == 0) {
-            $("#side-nav").fadeOut();
-        }
-        if (scrollTop >= ($projects.offset().top)/2) {
-            $projects.fadeIn("slow");
-        }
-        if (scrollTop >= $skills.offset().top) {
-            
-            $skills.fadeIn("slow");
-        }
-        if (scrollTop >= $contacts.offset().top) {
-            $contacts.fadeIn("slow");
-        }
     });
+    
+    $("#about-me-tab-container").tabs();
+    
     $("#tic-tac-toe-url").click(function(){
         $(".project-app").css("display", "none");
         $("#tic-tac-toe-app").toggle("slow");
@@ -591,7 +586,7 @@ $("#matrixRight").append("<input id=b" + i + "" + j + ' class="textFieldRight">'
                     $("#performance").animate({width: 180}); 
                     $("#experience").animate({width: 210}); 
                     $("#preference").animate({width: 240});
-                    $("#description").html("HTML is innevitable, I've been coding with HTML since 9th grade at this point I don't feel pretty confident at it.");
+                    $("#description").html("HTML is innevitable, I've been coding with HTML since 9th grade and at this point I feel pretty confident at it.");
                 break;
                 case "css-skill":
                     $("#performance").animate({width: 150});     

@@ -105,28 +105,36 @@
                     Greetings,
                     I am Martin, 19 years old. This is my first year in the Sofia university and I am also trending as a junior programmer.      
                 </p>
-                <p>
-                    <h4>Highschool: </h4>
-                      I wrote my first "Hello, world!" back in Highschool. I was 9th grade. I will never forget that day. The sun was shining, birds were singing and I was ... locked inside a room with a bunch of computers and a not so inspiring teacher. In Highschool i studied Java, HTML and CSS on a basic level. I didn't quite enjoy programming back then. I felt like the things we do were useless and have no practical use what so ever but at some point I met some people who got me into coding, people who brought value into these technologies, people who made programming useful for me.
-                </p>
-                <p>
-                    <h4>The Software university: </h4>
-                    When I was 11th grade I had accomplished everything there was to accomplish in Highschool but I wanted to improve so I starting searching for someone in school to teach me Object-oriented programming. I went through all of the school teacher but all of them refused to help me. A couple of months later I found a post about a trending software accademy called "The Software university". At first I was skeptical but I decided to give it a try. I finished level 0 and level 1 and I can say that this place gave me my programming fundamentals. Thexre I learned the basics of a couple of languages, frameworks and other technologies, I learned how to work in a team but most importantly i have learned how to manage problems I can't solve. A lot of time I was facing hard problems to which I had no solution but over time I learned how to start reserching the problems, gridnding it out and eventually solving it.
-                </p>
-                <p>
-                    <h4>Sofia university: </h4>
-                    I study statistics at the Sofia university. We study only math and basic C++. I don't quite learn anything practical but I develop my logical skills.
-                </p>
-                <p>
-                    <h4>Today: </h4>
-                    Nowadays, I am focused on learning math and doing my own small web projects. I feel like I am not receiving the needed education and I feel like I can learn much more in less time but I need a place to start at and I feel like the university isn't the right place. It's obvious that I will not learn anything practical- oriented I will become more eloquent and erudite but I also need a place the start doing real work. Currently I am focused on Front- end related technologies like jQuery and AJAX but I am also happy with studying Node.js in the university.
-                </p>
+                <div id="about-me-tab-container">
+                    <ul>
+                        <li class = "about-me-tab-header"><a href="#about-me-highscool-tab">Highschool</a></li>
+                        <li class = "about-me-tab-header"><a href="#about-me-softuni-tab">The Software university</a></li>
+                        <li class = "about-me-tab-header"><a href="#about-me-university-tab">Sofia university</a></li>
+                        <li class = "about-me-tab-header"><a href="#about-me-today-tab">Today</a></li>
+                    </ul>
+                    <div class = "about-me-tab" id = "about-me-highscool-tab">
+                        I wrote my first "Hello, world!" back in Highschool. I was 9th grade. I will never forget that day. The sun was shining, birds were singing and I was ... locked inside a room with a bunch of computers and a not so inspiring teacher. In Highschool i studied Java, HTML and CSS on a basic level. I didn't quite enjoy programming back then. I felt like the things we do were useless and have no practical use what so ever but at some point I met some people who got me into coding, people who brought value into these technologies, people who made programming useful for me.
+                    </div>
+                    <div class = "about-me-tab" id = "about-me-softuni-tab">
+                                            When I was 11th grade I had accomplished everything there was to accomplish in Highschool but I wanted to improve so I starting searching for someone in school to teach me Object-oriented programming. I went through all of the school teacher but all of them refused to help me. A couple of months later I found a post about a trending software accademy called "The Software university". At first I was skeptical but I decided to give it a try. I finished level 0 and level 1 and I can say that this place gave me my programming fundamentals. There I learned the basics of a couple of languages, frameworks and other technologies, I learned how to work in a team but most importantly i have learned how to manage problems I can't solve. A lot of time I was facing hard problems to which I had no solution but over time I learned how to start reserching the problems, gridnding it out and eventually solving it.
+
+                    </div>
+                    <div class = "about-me-tab" id = "about-me-university-tab">
+                                            I study statistics at the Sofia university. We study only math and basic C++. I don't quite learn anything practical but I develop my logical skills.
+
+                        
+                    </div>
+                    <div class = "about-me-tab" id = "about-me-today-tab">
+                                            Nowadays, I am focused on learning math and doing my own small web projects. I feel like I am not receiving the needed education and I feel like I can learn much more in less time but I need a place to start at and I feel like the university isn't the right place. It's obvious that I will not learn anything practical- oriented I will become more eloquent and erudite but I also need a place the start doing real work. Currently I am focused on Front- end related technologies like jQuery and AJAX but I am also happy with studying Node.js in the university.
+
+                    </div>
+                </div>
             </div>
 
 <!--Projects page-->
             <div id="projects-content" class="page-content">
                 <h2 id="project-title">Projects</h2>
-                <p>If you want to check all of my project, you can check my profile in <a href="https://github.com/martin-varbanov96">Github</a></p>
+                <p>If you want to check all of my projects, you can check my profile in <a href="https://github.com/martin-varbanov96">Github</a></p>
                 <ul id="projects-game-list" class="project-button">
                     <div id="game-dropdown">
                         <h3 >Game projects: </h3>
@@ -161,7 +169,7 @@
                     <li class="skills-li" id="cplusplus-skill">C++</li>
                     <li class="skills-li" id="mysql-skill">MySQL</li>
                 </ul>
-            
+                            
             <div id="skill-meter">
                             <div class="meter-desc">Performance</div>
 <!--                            <meter id="performance" value="0.6">60%</meter>-->

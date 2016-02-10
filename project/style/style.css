@@ -160,7 +160,7 @@ ul{
     border-bottom: 5px solid blue;
 }
 .page-content{
-    display: none;
+/*    display: none;*/
     border: 1px solid black;
     padding: 5px;
     border-radius: 10px;
@@ -226,4 +226,22 @@ ul{
 #game-dropdown:hover, #math-dropdown:hover, #burger{
     cursor: pointer;
     text-decoration: underline;
+}
+.about-me-tab-header a{
+    color: black
+}
+.about-me-tab-header{
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 0px auto;
+    margin-bottom: 0px;
+    width: 50%;
+    display: inline;
+    text-align: center;
+    vertical-align: middle;
+}
+.about-me-tab{
+    padding: 5px;
+    margin-top: 0px;
 }
