@@ -112,9 +112,9 @@ a{
 }
 #picture-martin{
     display: inline-block;
-    border-radius: 60px;
-    width: 150px;
-    height: 120px;
+    border-radius: 5px;
+    width: 100px;
+    height: 150px;
 }
 #content-main-intro{
     display: inline-block;
@@ -221,14 +221,14 @@ ul{
 }
 .nav-element-side:hover, .math-problems-li:hover, .projects-games-li:hover, .skills-li:hover{
         cursor: pointer;
-    opacity: 0.6;
+        opacity: 0.6;
 }
 #game-dropdown:hover, #math-dropdown:hover, #burger{
     cursor: pointer;
     text-decoration: underline;
 }
 .about-me-tab-header a{
-    color: black
+    color: black;
 }
 .about-me-tab-header{
     border-radius: 10px;
@@ -241,7 +241,25 @@ ul{
     text-align: center;
     vertical-align: middle;
 }
+.about-me-tab-current a, .about-me-tab-header a:hover{
+    color: whitesmoke;
+}
+.about-me-tab-header:hover{
+    background-color: #094595;
+    opacity: 0.6;
+}
+.about-me-tab-current{
+    background-color: #094595;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 0px auto;
+    margin-bottom: 0px;
+    width: 50%;
+    display: inline;
+    text-align: center;
+    vertical-align: middle;
+}
 .about-me-tab{
     padding: 5px;
-    margin-top: 0px;
 }

@@ -495,7 +495,19 @@ function reset() {
         
     });
     
+    
+    //About me code
+    
     $("#about-me-tab-container").tabs();
+    $(".about-me-tab-header > a").live("click", function(){
+       $(".about-me-tab-current").each(function(){
+           console.log("TEMP!!!!");
+           $(this).attr("class", "about-me-tab-header");
+       });
+           $(this).parent().attr("class", "about-me-tab-current");
+
+    });
+    
     
     $("#tic-tac-toe-url").click(function(){
         $(".project-app").css("display", "none");
