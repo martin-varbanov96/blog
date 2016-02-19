@@ -263,3 +263,16 @@ ul{
 .about-me-tab{
     padding: 5px;
 }
+.dead-square, .alive-square{
+    margin: 1px;
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+}
+.dead-square{
+    background-color: #D95;
+
+}
+.alive-square{
+    background-color: #272;
+}

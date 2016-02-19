@@ -28,12 +28,25 @@
                 <td class="freeSpot" id="C"></td>
             </tr>
         </table>
-         <button>RESET</button>
+         <button id="ttt-reset-button">RESET</button>
         <div id="scoreBoard">
             <div id="playerWin">Player wins: </div>
             <div id="botWin">Bot wins: </div>
             <div id="draw">Draw: </div>
         </div>
+    </div>
+    
+    <div id="life-game-app" class="project-app">                           <button id="project-life-close" class="project-app-close">X</button>
+
+        <div id="life-game-menu">
+            <input type="text" onblur="if(this.value==''){this.value='Enter width:'}" onfocus="if(this.value=='Enter width:'){this.value=''}" value = "Enter width:" id="set-width-size" class="set-size-input">
+                <input type="text" onblur="if(this.value==''){this.value='Enter height:'}" onfocus="if(this.value=='Enter height:'){this.value=''}" value = "Enter height:" id="set-height-size" class="set-size-input">
+                <button id="set-size-button">Set size</button>
+                <button id="step-into">Step Into</button>
+        </div>
+        <table>
+            <tbody id="elements-container"></tbody>
+        </table>
     </div>
     
 <!--    2x2 determinant app-->
@@ -140,6 +153,8 @@
                         <h3 >Game projects: </h3>
                     </div>
                     <li class="projects-games-li" id="tic-tac-toe-url">Tic Tac toe</li>
+                    <li class="projects-games-li" id="life-url">Life</li>
+
 <!--                    <li class="projects-games-li">Clcick the dot</li>-->
                 </ul>
                 <ul id="math-problems-list" class="project-button">
